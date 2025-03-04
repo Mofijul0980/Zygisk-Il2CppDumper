@@ -14,8 +14,7 @@ jobs:
     - uses: actions/setup-java@v3
       with:
         distribution: temurin
-        java-version: 11
-        cache: gradle
+        java-version: 
     - run: |
         chmod +x ./gradlew
         sed -i 's/moduleDescription = "/moduleDescription = "(${{ github.event.inputs.package_name }}) /g' module.gradle
